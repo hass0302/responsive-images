@@ -14,8 +14,22 @@ body {
 }
 
 img {
-    max-width: 100%;
     max-height: 100%;
+    max-width: 100%;
+    float: left;
+}
+
+img::after {
+    clear: both;
+}
+
+#wrapper::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
 }
 
 li {
@@ -25,9 +39,9 @@ li {
     list-style: none;
     border: 1px solid black;
     margin: 0.5rem 0;
-    padding: 0.5rem;
-    max-width: 600px;
-    max-height: 300px;
+    padding: 10px;
+    max-width: 420px;
+    max-height: 320px;
     background-color: azure;
     box-shadow: 1px 1px 2px #333;
     overflow: hidden;
@@ -38,7 +52,7 @@ li {
         box-sizing: border-box;
         list-style: none;
         width: 48%;
-        max-height: 450px;
+        max-height: 480px;
         max-width: 600px;
         padding: 0.5rem;
         margin: 1%;
